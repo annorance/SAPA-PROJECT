@@ -16,11 +16,11 @@ The application we developed, SAPA (Sign Language Personal Assistant), has two m
 
 # Machine Learning Track's Scope
 ## Methodology
-1. Data Collection: Used OpenCV to access the camera and process video frames (e.g., RGB to BGR conversion). The sign language recognized is Bisindo (Bahasa Isyarat Indonesia).
+1. Data Collection: Used OpenCV to access the camera and process video frames (e.g., RGB to BGR conversion). The sign language recognized is Bisindo (Bahasa Isyarat Indonesia). 50+ words were collected, including alphabets (a-z), numbers (1-10, 100, and 1000), verbs (i.e., "play", "come", and "eat"), interrogative words (i.e., "what", "why", "who", "when", "where", "how", "how many", "where are you from", and "where to"), pronoun (i.e., "I" and "you"), and miscellaneous (i.e. "name")
 2. Landmark Detection: Employed MediaPipe Holistic to detect and record coordinates of the face, body pose, left hand, and right hand.
 3. Feature Extraction: Detected landmarks were flattened into 1D arrays and saved as .npy files. Missing landmarks were filled with zeros.
 4. Preprocessing: Applied label mapping and split the data into training and testing sets.
-5. Model Development: A Bi-LSTM model was used to recognize gestures. Unlike standard LSTM (which works one way and fits static gestures), Bi-LSTM reads sequences in both directions, making it more effective for dynamic sign language recognition.
+5. Model Development: Built a Bi-LSTM model to translate a subset of five gestures ("A," "eat," "play," "who," and "why"). Unlike standard LSTM (which works one way and fits static gestures), Bi-LSTM reads sequences in both directions, making it more effective for dynamic sign language recognition. 
 
 ## Result and Evaluation
 The system is capable of translating five gestures: "A", "eat", "play", "who", and "why". The developed model achieved an overall accuracy of 87.5%.
